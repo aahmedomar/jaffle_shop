@@ -1,0 +1,78 @@
+steps:
+  STG_CUSTOMERS-1c7a418e-4bd6-4af3-8c13-309ff3c8b1d3:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: RAW
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 7afe36b8-4a5f-44fd-a6b5-be190383f4d3
+              stepCounter: 1c7a418e-4bd6-4af3-8c13-309ff3c8b1d3
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 28752d44-6804-45e0-b2b6-f77dcc642c25
+                    stepCounter: 7d52ba4e-546f-431d-9b97-1cb6a6060ef8
+                transform: ""
+          - columnReference:
+              columnCounter: 9355ac7c-c000-4d4a-bc69-2fd02ce8b604
+              stepCounter: 1c7a418e-4bd6-4af3-8c13-309ff3c8b1d3
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: FIRST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 082bc38c-5443-4b69-bd69-758d941976a6
+                    stepCounter: 7d52ba4e-546f-431d-9b97-1cb6a6060ef8
+                transform: ""
+          - columnReference:
+              columnCounter: b45cc03d-6a3c-4c65-957a-4df646351cbb
+              stepCounter: 1c7a418e-4bd6-4af3-8c13-309ff3c8b1d3
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: LAST_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 37bed6ad-0a4a-4b71-bcf1-9155317ba2ba
+                    stepCounter: 7d52ba4e-546f-431d-9b97-1cb6a6060ef8
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: RAW
+                nodeName: CUSTOMERS
+            join:
+              joinCondition: FROM {{ ref('RAW', 'CUSTOMERS') }} "CUSTOMERS"
+            name: STG_CUSTOMERS
+            noLinkRefs: []
+      name: STG_CUSTOMERS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 1c7a418e-4bd6-4af3-8c13-309ff3c8b1d3
