@@ -85,7 +85,7 @@ steps:
               - columnReferences:
                   - columnCounter: 5c42958e-a532-4506-b6cc-3e83de1b3c5b
                     stepCounter: 8ca69e04-6dac-4ab1-aa5b-8e9046ecaf01
-                transform: ""
+                transform: round( 1.0 * amount / 100, 4)
           - columnReference:
               columnCounter: 5d382b90-2961-404b-8a5c-9e901814d8b2
               stepCounter: 7b26eb01-a322-4d72-a29e-9bf98769f5c2
